@@ -175,12 +175,6 @@ Deployment
 Streamlit
 
 
-📦 Installation & Setup
-git clone https://github.com/your-username/churn-prediction-ann.git
-cd churn-prediction-ann
-pip install -r requirements.txt
-
-
 ▶️ Run Application
 streamlit run app.py
 
