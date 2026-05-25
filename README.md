@@ -1,14 +1,20 @@
 📊 AI Customer Churn Prediction System
+
 An end-to-end Deep Learning (ANN) based Customer Churn Prediction System built using TensorFlow/Keras and deployed with Streamlit.
 This system predicts whether a bank customer is likely to leave based on behavioral and financial attributes.
 
 
+
 🚀 Project Overview
+
 Customer churn is one of the most critical problems in the banking sector. Retaining existing customers is significantly cheaper than acquiring new ones.
+
 This project uses a Artificial Neural Network (ANN) trained on structured customer data to predict churn probability and help businesses take proactive retention actions.
 
 
+
 🧠 Problem Statement
+
 Given customer details such as:
 Credit Score
 Geography
@@ -21,6 +27,7 @@ Activity Status
 
 
 🏗️ System Architecture
+
 Raw Data (CSV)
       ↓
 Data Preprocessing
@@ -43,6 +50,7 @@ Streamlit Web App (Inference)
 
 
 🧪 Dataset Information
+
 Dataset: Churn Modelling Dataset
 Rows: 10,000
 Features: 13 input features + target
@@ -53,6 +61,7 @@ Categorical: Geography, Gender
 
 
 🧹 Data Preprocessing Pipeline
+
 1. Feature Cleaning
 Removed:
 RowNumber
@@ -66,6 +75,7 @@ StandardScaler applied to normalize features for ANN stability
 
 
 🧠 Model Architecture (ANN)
+
 model = Sequential([
     Dense(11, activation='relu', input_dim=11),
     Dense(7, activation='relu'),
@@ -84,6 +94,8 @@ Class Weights:
 
 👉 Used to handle class imbalance (churn cases are fewer)
 
+
+
 📈 Model Evaluation
 
 🔹 ROC-AUC Score
@@ -98,18 +110,21 @@ High recall achieved for churn class → important for business retention use-ca
 
 
 📊 Performance Visualization
+
 Training vs Validation Loss
 Training vs Validation Recall
 ROC Curve Analysis
 
 
 💾 Model Export
+
 Model saved using Keras:
 churn_model.keras
 🌐 Streamlit Web Application
 An interactive UI built using Streamlit for real-time predictions.
 
 Features:
+
 User-friendly input sliders and dropdowns
 Real-time churn probability prediction
 Risk classification (High / Low)
@@ -118,6 +133,7 @@ Custom UI styling (dark theme)
 
 
 🧾 Input Features (UI)
+
 Feature	Type
 Credit Score	Numeric
 Geography	Categorical
@@ -134,6 +150,7 @@ Estimated Salary	Numeric
 
 
 🔮 Prediction Logic
+
 probability = model.predict(input_scaled)
 Decision Rule:
 probability > 0.5 → High churn risk
@@ -141,6 +158,7 @@ probability ≤ 0.5 → Low churn risk
 
 
 🧑‍💼 Business Impact
+
 This system helps banks:
 
 Identify at-risk customers early
@@ -160,10 +178,12 @@ Streamlit
 
 
 ▶️ Run Application
+
 streamlit run app.py
 
 
 📌 Future Improvements
+
 Replace ANN with XGBoost / Hybrid Model
 Add SHAP explainability for predictions
 Deploy using Docker + AWS / Azure
